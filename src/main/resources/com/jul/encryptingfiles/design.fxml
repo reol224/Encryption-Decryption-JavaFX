@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f18d7c;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jul.encryptingfiles.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f18d7c;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jul.encryptingfiles.Controller">
    <children>
-      <Button fx:id="EncryptButton" layoutX="342.0" layoutY="162.0" mnemonicParsing="false" onAction="#encryptFile" onMouseClicked="#encryptFile" prefHeight="25.0" prefWidth="68.0" style="-fx-background-radius: 10;" text="Encrypt" AnchorPane.bottomAnchor="213.0" AnchorPane.leftAnchor="342.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="162.0">
+      <Button fx:id="EncryptButton" layoutX="342.0" layoutY="162.0" mnemonicParsing="false" onMouseClicked="#encryptFile" prefHeight="25.0" prefWidth="68.0" style="-fx-background-radius: 10;" text="Encrypt" AnchorPane.bottomAnchor="213.0" AnchorPane.leftAnchor="342.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="162.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
@@ -15,7 +15,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="ChooseFileButton" layoutX="191.0" layoutY="188.0" mnemonicParsing="false" onAction="#chooseFile" onMouseClicked="#chooseFile" prefHeight="25.0" prefWidth="109.0" style="-fx-background-radius: 10;" text="Choose file..." AnchorPane.bottomAnchor="187.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="188.0">
+      <Button fx:id="ChooseFileButton" layoutX="191.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#chooseFile" prefHeight="25.0" prefWidth="109.0" style="-fx-background-radius: 10;" text="Choose file..." AnchorPane.bottomAnchor="187.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="188.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>

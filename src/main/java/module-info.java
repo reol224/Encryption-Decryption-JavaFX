@@ -9,6 +9,7 @@ module com.jul.encryptingfiles {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.logging;
 
     opens com.jul.encryptingfiles to javafx.fxml;
     exports com.jul.encryptingfiles;
