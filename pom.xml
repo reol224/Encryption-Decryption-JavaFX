@@ -11,7 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>5.8.2</junit.version>
+        <junit.version>5.7.1</junit.version>
     </properties>
 
     <dependencies>
@@ -23,34 +23,22 @@
         <dependency>
             <groupId>io.github.palexdev</groupId>
             <artifactId>materialfx</artifactId>
-            <version>11.13.0</version>
+            <version>11.12.0</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-<<<<<<< HEAD
-            <version>17.0.2</version>
-=======
             <version>17.0.1</version>
->>>>>>> a6e364107252bbb815027024fd312b39b543a3a8
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-<<<<<<< HEAD
-            <version>17.0.2</version>
-=======
             <version>17.0.1</version>
->>>>>>> a6e364107252bbb815027024fd312b39b543a3a8
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
-<<<<<<< HEAD
-            <version>17.0.2</version>
-=======
             <version>17.0.1</version>
->>>>>>> a6e364107252bbb815027024fd312b39b543a3a8
         </dependency>
         <dependency>
             <groupId>org.controlsfx</groupId>
@@ -60,7 +48,7 @@
         <dependency>
             <groupId>com.dlsc.formsfx</groupId>
             <artifactId>formsfx-core</artifactId>
-            <version>11.4.2</version>
+            <version>11.5.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.openjfx</groupId>
@@ -71,11 +59,7 @@
         <dependency>
             <groupId>net.synedra</groupId>
             <artifactId>validatorfx</artifactId>
-<<<<<<< HEAD
             <version>0.2.1</version>
-=======
-            <version>0.1.14</version>
->>>>>>> a6e364107252bbb815027024fd312b39b543a3a8
             <exclusions>
                 <exclusion>
                     <groupId>org.openjfx</groupId>
@@ -86,7 +70,7 @@
         <dependency>
             <groupId>org.kordamp.ikonli</groupId>
             <artifactId>ikonli-javafx</artifactId>
-            <version>12.2.0</version>
+            <version>12.3.0</version>
         </dependency>
         <dependency>
             <groupId>org.kordamp.bootstrapfx</groupId>
@@ -96,11 +80,7 @@
         <dependency>
             <groupId>eu.hansolo</groupId>
             <artifactId>tilesfx</artifactId>
-<<<<<<< HEAD
-            <version>17.1.2</version>
-=======
-            <version>17.0.7</version>
->>>>>>> a6e364107252bbb815027024fd312b39b543a3a8
+            <version>17.0.11</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.openjfx</groupId>
