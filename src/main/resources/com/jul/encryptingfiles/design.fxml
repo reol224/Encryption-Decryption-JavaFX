@@ -2,11 +2,10 @@
 
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2f2c45;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jul.encryptingfiles.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2f2c45;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jul.encryptingfiles.Controller">
    <children>
       <Pane layoutX="197.0" layoutY="-118.0" prefHeight="264.0" prefWidth="269.0" style="-fx-background-radius: 30; -fx-background-color: #fe3f53; -fx-rotate: 40;" />
       <Button fx:id="EncryptButton" layoutX="342.0" layoutY="162.0" mnemonicParsing="false" onMouseClicked="#encryptFile" prefHeight="25.0" prefWidth="68.0" style="-fx-background-radius: 10;" text="Encrypt" AnchorPane.bottomAnchor="213.0" AnchorPane.leftAnchor="342.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="162.0">
@@ -26,15 +25,5 @@
          <font>
             <Font name="System Italic" size="12.0" />
          </font></TextField>
-      <ImageView disable="true" fitHeight="36.0" fitWidth="32.0" layoutX="33.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@unlock.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="66.0" layoutY="28.0" nodeOrientation="RIGHT_TO_LEFT" text="Cryp7o" textAlignment="JUSTIFY" textFill="WHITE">
-         <font>
-            <Font name="JetBrains Mono ExtraLight" size="32.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

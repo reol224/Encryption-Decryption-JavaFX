@@ -9,7 +9,10 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -20,35 +23,41 @@ public class Controller {
     public Button DecryptButton;
     public TextField NameOfFile;
     File file;
+    BufferedWriter writer;
     SecretKey key;
     IvParameterSpec iv;
     Boolean isEncrypted = false;
-    String encryptedText;
-    String decryptedText;
 
     public void chooseFile() {
-        FileChooser fileChooser = new FileChooser();
-        file = fileChooser.showOpenDialog(ChooseFileButton.getScene().getWindow());
-        if(file!=null){
-            HelpfulMethods.readFile(file);
-            NameOfFile.setText(file.getName());
+        try{
+            FileChooser fileChooser = new FileChooser();
+            file = fileChooser.showOpenDialog(ChooseFileButton.getScene().getWindow());
+            if(file!=null && file.length()>0){
+                HelpfulMethods.readFile(file);
+                writer = new BufferedWriter(new FileWriter(file.getPath(), true));
+                NameOfFile.setText(file.getName());
+                writer.flush();
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
-        else{
-            System.out.println("You didn't choose any file!");
-        }
+
 
     }
 
-    public void encryptFile() throws NoSuchAlgorithmException, InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException {
+    public void encryptFile() throws NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException {
         if(file!=null) {
             try {
                 if (!isEncrypted) {
                     //128 192 256
                     key = HelpfulMethods.generateKey(256);
                     iv = HelpfulMethods.generateIv();
-                    encryptedText = HelpfulMethods.encrypt("AES/CBC/PKCS5PADDING", HelpfulMethods.data, key, iv);
+                    HelpfulMethods.data = HelpfulMethods.encrypt("AES/CBC/PKCS5PADDING", HelpfulMethods.data, key, iv);
                     isEncrypted = true;
-                    System.out.println("the encrypted text is " + encryptedText);
+                    writer = new BufferedWriter(new FileWriter(file.getPath(), false));
+                    writer.write(HelpfulMethods.data);
+                    writer.flush();
+                    System.out.println("the encrypted text is " + HelpfulMethods.data);
                 }
             } catch (NoSuchAlgorithmException e) {
                 System.out.println("The algorithm you've chosen doesn't exist!");
@@ -56,17 +65,23 @@ public class Controller {
             } catch (InvalidAlgorithmParameterException e) {
                 System.out.println("Invalid argument parameter!");
                 e.printStackTrace();
+            } catch (IOException e) {
+                System.out.println("An error occurred!");
+                throw new RuntimeException(e);
             }
         } else{
             System.out.println("No text to encrypt!");
         }
     }
 
-    public void decryptFile() throws InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
+    public void decryptFile() throws InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException, IOException {
         if(isEncrypted){
-            decryptedText = HelpfulMethods.decrypt("AES/CBC/PKCS5PADDING", encryptedText, key, iv);
+            HelpfulMethods.data = HelpfulMethods.decrypt("AES/CBC/PKCS5PADDING", HelpfulMethods.data, key, iv);
             isEncrypted = false;
-            System.out.println("the decrypted text is " + decryptedText);
+            writer = new BufferedWriter(new FileWriter(file.getPath(), false));
+            writer.write(HelpfulMethods.data);
+            writer.flush();
+            System.out.println("the decrypted text is " + HelpfulMethods.data);
         } else {
             System.out.println("Text is not encrypted yet!");
         }

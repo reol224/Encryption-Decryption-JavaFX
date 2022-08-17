@@ -12,11 +12,12 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
+import java.util.Arrays;
 import java.util.Base64;
 import java.util.Scanner;
 
 public class HelpfulMethods {
-    static String data;
+    public static String data;
     public static void readFile(File file){
         try {
             Scanner myReader = new Scanner(file);
