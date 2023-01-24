@@ -23,7 +23,7 @@
         <dependency>
             <groupId>io.github.palexdev</groupId>
             <artifactId>materialfx</artifactId>
-            <version>11.13.5</version>
+            <version>11.13.6</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
