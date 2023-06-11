@@ -27,3 +27,47 @@ hs_err_pid*
 .vscode
 /target/
 target/
+
+# IntelliJ IDEA project files
+.idea/
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# Gradle build directory
+build/
+
+# Generated documentation
+javadocs/
+
+# Operating System-specific files
+.DS_Store
+Thumbs.db
+
+# Gradle wrapper files
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+
+# Maven wrapper files
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# JavaFX specific files
+dist/
+nbproject/private/
+nbbuild/
+nbdist/
+src/main/javadoc/
+src/main/webapp/
+
+# Gradle specific files
+.gradle/
+
+# macOS specific files
+*.iml
+*.ipr
+*.iws
+
+
